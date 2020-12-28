@@ -41,7 +41,7 @@
         <div class="user-image">
           <img src="<%= "/user_images/#{@user.image_name}" %>">
             <div class="user-btn">
-            <% if @user.id == @current_user.id || @user.admin == true %>
+            <% if @user.id == @current_user.id || @user.admin = true %>
               <div class="user-edit-btn">
                 <%= link_to("アカウント編集","/users/#{@user.id}/edit") %>
               </div>
