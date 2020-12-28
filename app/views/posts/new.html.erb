@@ -1,0 +1,70 @@
+<header>
+<div class="header-logo">
+  <% if @current_user %>
+    <%= link_to("archipicture", "/posts/index") %>
+  <% else %>
+    <%= link_to("archipicture", "/") %>
+  <% end %>
+</div>
+<ul class="header-menus">
+  <% if @current_user %>
+    <li>
+      <%= link_to("投稿一覧","/posts/index") %>
+    </li>
+    <li>
+      <%= link_to("新規投稿","/posts/#{@current_user.id}/new") %>
+    </li>
+    <li>
+      <%= link_to("#{@current_user.name}さん", "/users/#{@current_user.id}") %>
+    </li>
+    <li>
+      <%= link_to("ログアウト", "/logout",{method: "post"}) %>
+    </li>
+  <% else %>
+    <li>
+      <%= link_to("新規ユーザー登録", "/users/signup") %>
+    </li>
+    <li>
+      <%= link_to("ログイン", "/login") %>
+    </li>
+  <% end %>
+</ul>
+</header>
+
+<div class="post_new_top">
+  <div class="post_new_wrapper">
+    <div class="post_new_form">
+      <%= form_tag("/posts/create",{multipart: true}) do %>
+        <div class="post_new_header">
+          <h2>投稿</h2>
+        </div>
+        <% @post.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        <div class="post_new">
+          <p>タイトル（※必ずご入力ください）</p>
+            <input name="item_name" value="<%= @post.item_name %>">
+          <p>建物名/場所</p>
+            <input name="place_name" value="<%= @post.place_name %>">
+          <p>設計</p>
+            <input name="designer" value="<%= @post.designer %>">
+          <p>画像</p>
+            <input name="image" type="file"><br>
+          <input type="submit" value="投稿">
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<footer>
+<div class="footer-logo">
+  <% if @current_user %>
+    <%= link_to("archipicture", "/posts/index") %>
+  <% else %>
+    <%= link_to("archipicture", "/") %>
+  <% end %>
+</div>
+</footer>

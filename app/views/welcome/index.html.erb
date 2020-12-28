@@ -1,0 +1,77 @@
+<header>
+<div class="header-logo">
+  <% if @current_user %>
+    <%= link_to("archipicture", "/posts/index") %>
+  <% else %>
+    <%= link_to("archipicture", "/") %>
+  <% end %>
+</div>
+<ul class="header-menus">
+  <% if @current_user %>
+    <li>
+      <%= link_to("投稿一覧","/posts/index") %>
+    </li>
+    <li>
+      <%= link_to("新規投稿","/posts/#{@current_user.id}/new") %>
+    </li>
+    <li>
+      <%= link_to("#{@current_user.name}さん", "/users/#{@current_user.id}") %>
+    </li>
+    <li>
+      <%= link_to("ログアウト", "/logout",{method: "post"}) %>
+    </li>
+  <% else %>
+    <li>
+      <%= link_to("投稿一覧","/posts/index") %>
+    </li>
+    <li>
+      <%= link_to("新規ユーザー登録", "/users/signup") %>
+    </li>
+    <li>
+      <%= link_to("ログイン", "/login") %>
+    </li>
+  <% end %>
+</ul>
+</header>
+
+<div class="top_main_container">
+  <img src="/archi1.jpg">
+  <div class="top_main_wrapper">
+    <div class="about_main">
+        <div class="about_main_text">
+          <h2>建築物の写真を共有しよう</h2>
+        </div>
+        <ul class="about_image">
+          <li>
+            <img src="archi2.jpg">
+            <p>旅先で見つけた建築物を投稿</p>
+          </li>
+          <li>
+            <img src="archi3.jpg">
+            <p>自ら設計を手掛けた建築作品をアピール</p>
+          </li>
+          <li>
+            <img src="archi4.jpg">
+            <p>著名建築家による建築物を記録</p>
+          </li>
+        </ul>
+        <div class="about_text">
+          <h3>あなたが撮った一枚を投稿、誰かが撮った一枚を共有</h3>
+          <p>建築写真の投稿、建築物の説明、設計者の記載、投稿写真へのgood!(いいね)ができます。</p><br>
+          <div class="about_login">
+            <a href="/users/signup">新規ユーザー登録</a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+<div class="footer-logo">
+  <% if @current_user %>
+    <%= link_to("archipicture", "/posts/index") %>
+  <% else %>
+    <%= link_to("archipicture", "/") %>
+  <% end %>
+</div>
+</footer>

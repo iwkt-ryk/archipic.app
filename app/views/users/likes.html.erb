@@ -1,0 +1,92 @@
+<header>
+<div class="header-logo">
+  <% if @current_user %>
+    <%= link_to("archipicture", "/posts/index") %>
+  <% else %>
+    <%= link_to("archipicture", "/") %>
+  <% end %>
+</div>
+<ul class="header-menus">
+  <% if @current_user %>
+    <li>
+      <%= link_to("投稿一覧","/posts/index") %>
+    </li>
+    <li>
+      <%= link_to("新規投稿","/posts/#{@current_user.id}/new") %>
+    </li>
+    <li>
+      <%= link_to("#{@current_user.name}さん", "/users/#{@current_user.id}") %>
+    </li>
+    <li>
+      <%= link_to("ログアウト", "/logout",{method: "post"}) %>
+    </li>
+  <% else %>
+    <li>
+      <%= link_to("新規ユーザー登録", "/users/signup") %>
+    </li>
+    <li>
+      <%= link_to("ログイン", "/login") %>
+    </li>
+  <% end %>
+</ul>
+</header>
+
+<div class="user_show">
+  <div class="user_show_wrapper">
+    <div class="show-heading">
+        <h2>ユーザーページ</h2>
+    </div>
+    <div class="user_show_content">
+      <div class="user_content_left">
+        <div class="user-image">
+          <img src="<%= "/user_images/#{@user.image_name}" %>">
+            <% if @user.id == @current_user.id %>
+              <div class="user-edit-btn">
+                <%= link_to("アカウント編集","/users/#{@user.id}/edit") %><br>
+              </div>
+            <% end %>
+        </div>
+        <div class="user_name">
+          <p>ユーザーネーム</p>
+          <h3><%= @user.name %></h3>
+          <p>自己紹介文</p>
+          <h4><%= @user.self_introduction %></h4>
+        </div>
+      </div>
+      <div class="user_content_right">
+      </div>
+    </div>
+    <div class="posts_index_contents">
+      <div class="index_contents_header">
+        <%= link_to("#{@user.name}さんの投稿一覧","/users/#{@user.id}",{class: "user_post_index_l"}) %> / <%= link_to("#{@user.name}さんの good! 一覧","/users/#{@user.id}/likes",{class: "user_like_index_l"}) %>
+      </div>
+      <ul class="posts_list_multiple">
+      <% @likes.each do |like| %>
+        <% post = Post.find_by(id: like.post_id) %>
+        <li>
+          <div class="image_area">
+            <div class = "post_user">
+              <%= image_tag "/user_images/#{post.user.image_name}" , class: "post_user_image" %>
+              <%= link_to("#{post.user.name}","/users/#{post.user.id}",{class: "post_user_name"}) %>
+            </div>
+            <div class = "post_contents">
+              <img src="<%= "/post_images/#{post.image_name}" %>"><br>
+              <%= link_to("#{post.item_name}","/posts/#{post.id}",{class: "post_content_name"}) %>
+            </div>
+          </div>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+<div class="footer-logo">
+  <% if @current_user %>
+    <%= link_to("archipicture", "/posts/index") %>
+  <% else %>
+    <%= link_to("archipicture", "/") %>
+  <% end %>
+</div>
+</footer>

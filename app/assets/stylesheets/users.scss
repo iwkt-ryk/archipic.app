@@ -1,0 +1,413 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#--------------------users_new--------------------------
+.user_new_top {
+  width: 1349px;
+  height: 800px;
+}
+
+.user_new_wrapper {
+  width: 100%;
+  height: 800px;
+  background-image: url("/archi7.jpg");
+  background-size: cover;
+  padding: 150px 0;
+}
+
+.user_new_form {
+  width: 25%;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border:1px solid #fff;
+  background-color:rgba(255,255,255,0.9);
+}
+
+  
+.user_new_heading {
+  text-align: center;
+}
+
+.user_new_heading h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #354e59;
+  text-align: center;
+  border-bottom: 1px solid #ad9f8a;
+  padding: 10px;
+}
+
+.user_input_form {
+  padding: 30px;
+}
+
+.user_input_form p {
+  text-align: center;
+  color: rgba(53,78,89,0.8);
+  padding-bottom: 10px;
+}
+  
+.form-error {
+  color: #ff1548;
+  text-align: center;
+  font-size: 15px;
+  margin: 0 auto;
+}
+  
+.user_input_form input {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgba(53,78,89,0.5);
+  box-shadow: inset 0 1px 3px #ddd;
+  padding: 10px;
+  color: black;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+  
+.form textarea {
+  width: 100%;
+  min-height: 110px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+  
+.user_input_form input[type="submit"] {
+  background-color: #738e99;
+  box-shadow: 0px 6px #354e59;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+  display: block;
+  opacity: 1;
+}
+
+.user_input_form input[type="submit"]:active {
+  position: relative;
+  top: 6px;
+  box-shadow: none;
+}
+  
+.form-body:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+#----------------------user_page-------------------------------------
+.user_show {
+    width: 1349px;
+    height: auto;
+}
+
+.user_show_wrapper {
+  width: 100%;
+  height: auto;
+  padding: 0 16px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.show-heading {
+  width: 100%;
+  background-color: #eeeae4;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.show-heading h2 {
+  font-size: 15px;
+  color: #354e59;
+}
+
+.user_show_content {
+  width: 100%;
+  display: flex;
+}
+
+.user_content_left {
+  width: 50%;
+  padding: 20px 0;
+  display: flex;
+}
+
+.user-image {
+  width: 300px;
+  text-align: center;
+}
+
+.user-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+.user_name {
+    width: 50%;
+    color: #354e59;
+
+}
+
+.user_name p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #354e59;
+    margin-top: 20px;
+}
+
+.user_name h3 {
+    font-size: 15px;
+    font-weight: 400;
+    border-bottom: 1px solid #354e59;
+}
+
+.user_name h4 {
+  font-size: 15px;
+  font-weight: 400;
+  border-bottom: 1px solid #354e59;
+}
+
+.user_post_index {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+}
+
+.user_post_index_l {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ad9f8a;
+}
+
+.user_post_index_l:hover {
+  opacity: 0.6;
+}
+
+.user_like_index {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ad9f8a;
+}
+
+.user_like_index:hover {
+  opacity: 0.6;
+}
+
+.user_like_index_l {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+}
+
+.user-edit-btn {
+    font-size: 15px;
+    width: 120px;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: #eeeae4;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.user-edit-btn:hover {
+  opacity: 0.6;
+}
+
+.user_content_right {
+  width: 50%;
+  padding: 20px 0;
+  text-align: center;
+  color: #354e59;
+}
+
+.index_contents_header {
+  width: 100%;
+  color: #354e59;
+  border-bottom: 1px solid #eeeae4;
+}
+
+#------------------user_edit----------------------------------
+.user_edit_top {
+  width: 1349px;
+  height: 1000px;
+}
+
+
+.user_edit_wrapper {
+  width: 100%;
+  height: 800px;
+  background-image: url("/archi6.jpg");
+  background-size: cover;
+  padding: 50px 0;
+}
+
+.user_edit_form {
+  width: 30%;
+  height: 700px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border:1px solid #fff;
+  background-color:rgba(255,255,255,0.9);
+}
+
+.edit_heading {
+  text-align: center;
+}
+
+.edit_heading h3 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #354e59;
+  text-align: center;
+  border-bottom: 1px solid #ad9f8a;
+  padding: 10px;
+}
+
+.edit_input_form {
+  padding: 30px;
+}
+
+.edit_input_form p {
+  text-align: center;
+  color: rgba(53,78,89,0.8);
+  padding-bottom: 10px;
+}
+
+.edit_input_form input {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgba(53,78,89,0.5);
+  box-shadow: inset 0 1px 3px #ddd;
+  padding: 10px;
+  color: black;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+.edit_input_form textarea {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgba(53,78,89,0.5);
+  box-shadow: inset 0 1px 3px #ddd;
+  padding: 10px;
+  color: black;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+.edit_input_form input[type="submit"] {
+  background-color: #738e99;
+  box-shadow: 0px 6px #354e59;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+  display: block;
+  opacity: 1;
+  }
+
+.edit_input_form input[type="submit"]:active {
+  position: relative;
+  top: 6px;
+  box-shadow: none;
+}
+
+#-------------------login_form---------------------------------
+.users_login_top {
+    width: 1349px;
+    height: 800px;
+}
+
+.users_login_wrapper {
+  width: 100%;
+  height: 800px;
+  background-image: url("/archi5.jpg");
+  background-size: cover;
+  padding: 150px 0;
+}
+
+.users_login_form{
+  width: 25%;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border:1px solid #fff;
+  background-color:rgba(255,255,255,0.9);
+}
+
+.users_login_heading {
+  text-align: center;
+}
+
+.users_login_heading h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #354e59;
+  text-align: center;
+  border-bottom: 1px solid #ad9f8a;
+  padding: 10px;
+}
+
+.form-error {
+  color: #e43c60;
+  text-align: center;
+}
+
+.users_login {
+  padding: 30px;
+}
+
+.users_login p {
+  text-align: center;
+  color: rgba(53,78,89,0.8);
+  padding-bottom: 10px;
+}
+
+.users_login input {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgba(53,78,89,0.5);
+  box-shadow: inset 0 1px 3px #ddd;
+  padding: 10px;
+  color: black;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+.users_login input[type="submit"] {
+  background-color: #738e99;
+  box-shadow: 0px 6px #354e59;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  width: 120px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+  display: block;
+  opacity: 1;
+  }
+
+.users_login input[type="submit"]:active {
+  position: relative;
+  top: 6px;
+  box-shadow: none;
+}

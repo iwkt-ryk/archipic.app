@@ -1,0 +1,416 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#---------------post_new---------------------
+.post_new_top {
+    width: 1349px;
+    height: 800px;
+}
+
+.post_new_wrapper {
+    width: 100%;
+    height: 800px;
+    background-image: url("/archi8.jpg");
+    background-size: cover;
+    padding: 150px 0;
+}
+
+.post_new_form {
+    width: 40%;
+    height: 540px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border:1px solid #fff;
+    background-color:rgba(255, 255, 255, 0.9);
+}
+
+.post_new_header {
+    text-align: center;
+}
+
+.post_new_header h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #354e59;
+    text-align: center;
+    border-bottom: 1px solid #ad9f8a;
+    padding: 10px;
+}
+
+.post_new {
+    padding: 30px;
+}
+
+.post_new p {
+    text-align: center;
+    color: rgba(53,78,89,0.8);
+    padding-bottom: 10px;
+}
+
+.post_new input {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgba(53,78,89,0.5);
+    box-shadow: inset 0 1px 3px #ddd;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+.post_new textarea {
+    width: 600px;
+    text-align: center;
+    border: 1px solid #333;
+    padding: 10px;
+    color: #333;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-radius: 2px;
+}
+
+.post_new input[type="submit"] {
+    background-color: #738e99;
+    box-shadow: 0px 6px #354e59;
+    color: white;
+    cursor: pointer;
+    font-weight: 300;
+    width: 120px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    display: block;
+    opacity: 1;
+}
+
+.post_new input[type="submit"]:active {
+    position: relative;
+    top: 6px;
+    box-shadow: none;
+}
+
+#--------------post_edit-------------------------
+.post_edit {
+    width: 1349px;
+    height: 800px;
+}
+
+.post_edit_wrapper {
+    width: 100%;
+    height: 800px;
+    background-image: url("/archi9.jpg");
+    background-size: cover;
+    padding: 150px 0;
+}
+
+.post_edit_form {
+    width: 40%;
+    height: 540px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border:1px solid #fff;
+    background-color:rgba(255, 255, 255, 0.9);
+}
+
+.post_edit_heading {
+    text-align: center;
+}
+
+.post_edit_heading h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #354e59;
+    text-align: center;
+    border-bottom: 1px solid #ad9f8a;
+    padding: 10px;
+}
+
+.item_edit_name {
+    padding: 30px;
+}
+
+.item_edit_name p {
+    text-align: center;
+    color: rgba(53,78,89,0.8);
+    padding-bottom: 10px;
+}
+
+.item_edit_name input {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgba(53,78,89,0.5);
+    box-shadow: inset 0 1px 3px #ddd;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+.item_edit_name textarea {
+    width: 600px;
+    text-align: center;
+    border: 1px solid #333;
+    padding: 10px;
+    color: #333;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-radius: 2px;
+}
+
+.item_edit_name input[type="submit"] {
+    background-color: #738e99;
+    box-shadow: 0px 6px #354e59;
+    color: white;
+    cursor: pointer;
+    font-weight: 300;
+    width: 120px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    display: block;
+    opacity: 1;
+}
+
+.item_edit_name input[type="submit"]:active {
+    position: relative;
+    top: 6px;
+    box-shadow: none;
+}
+
+#------------posts_index--------------
+
+.posts_index_container {
+    width: 1349px;
+    height: 1500px;
+}
+
+.posts_index_wrapper {
+    width: 100%;
+    height: 1500px;
+    padding: 0 16px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.posts_index_heading {
+    width: 100%;
+    background-color: #eeeae4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.posts_index_heading h1 {
+    font-size: 15px;
+    color: #354e59;
+}
+
+.posts_index_contents {
+    width: 100%;
+    height: 1000px;
+    padding: 0 16px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.posts_list_multiple {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.posts_list_multiple ul {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.posts_list_multiple li {
+    width: 250px;
+    height: auto;
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.image_area {
+    width: 250px;
+    height: 250px;
+}
+
+.post_user {
+    width: 100%;
+    height: 25px;
+    float: left;
+}
+
+.post_user_image {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.post_user_name{
+    font-size: 12px;
+    color: #354e59;
+}
+
+.post_user_name:hover {
+    opacity: 0.6;
+}
+
+.post_contents img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.post_content_name {
+    font-size: 15px;
+    color: #354e59;
+}
+
+.post_content_name:hover {
+    opacity: 0.6;
+}
+
+.paginate {
+    text-align: center;
+    padding: 10px 0;
+}
+
+#-----------------items_index--------------------
+
+.items_index_container {
+    width: 1349px;
+    height: auto;
+}
+
+.items_index_wrapper {
+    width: 1152px;
+    height: auto;
+    padding: 0 16px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.items_index_heading {
+    padding-top: 20px;
+}
+
+.items_index_heading h1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.items_index_heading p {
+    font-size: 12px;
+
+}
+
+.search_items_list_contents {
+    width: 100%;
+    margin-top: 30px;
+    vertical-align: baseline;
+}
+
+.items_list_multiple {
+    width: 100%;
+    position: relative;
+    vertical-align: baseline;
+    line-height: 1.2;
+    font-size: 100%;
+}
+
+.items_list_multiple li {
+    width: 19%;
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#-------------------post_show----------------
+
+.post_page_container {
+    width: 1349px;
+    height: 1000px;
+}
+
+.post_content_area {
+    width: 100%;
+    height: 1000px;
+    padding: 0 16px;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.post_content_left {
+    width: 1100px;
+}
+
+.post_content_left img {
+    width: 1100px;
+}
+
+.post_content_right {
+    width: 300px;
+    padding-left: 16px;
+    float: right;
+}
+
+.post_user_image_info {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.post_user_name_info {
+    font-size: 20px;
+    color: #354e59;
+}
+
+.post_content_info {
+    padding-top: 30px;
+}
+
+.post_content_info h2 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #354e59;
+    margin-top: 20px;
+}
+
+.content_name {
+    font-size: 20px;
+    font-weight: 400;
+    color: #354e59;
+    border-bottom: 1px solid #eeeae4;
+}
+
+.fav {
+    width: 100%;
+    position: relative;
+}
+
+.fav h4 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.like-btn {
+    color:#8899a6;
+    padding-left: 10px;
+}
+
+.like-btn-unlike {
+    color:yellow;
+    padding-left: 10px;
+  }
+

@@ -1,0 +1,72 @@
+<header>
+<div class="header-logo">
+  <% if @current_user %>
+    <%= link_to("archipicture", "/posts/index") %>
+  <% else %>
+    <%= link_to("archipicture", "/") %>
+  <% end %>
+</div>
+<ul class="header-menus">
+  <% if @current_user %>
+    <li>
+      <%= link_to("投稿一覧","/posts/index") %>
+    </li>
+    <li>
+      <%= link_to("新規投稿","/posts/#{@current_user.id}/new") %>
+    </li>
+    <li>
+      <%= link_to("#{@current_user.name}さん", "/users/#{@current_user.id}") %>
+    </li>
+    <li>
+      <%= link_to("ログアウト", "/logout",{method: "post"}) %>
+    </li>
+  <% else %>
+    <li>
+      <%= link_to("投稿一覧","/posts/index") %>
+    </li>
+    <li>
+      <%= link_to("新規ユーザー登録", "/users/signup") %>
+    </li>
+    <li>
+      <%= link_to("ログイン", "/login") %>
+    </li>
+  <% end %>
+</ul>
+</header>
+
+<div class="posts_index_container">
+  <div class="posts_index_wrapper">
+    <div class="posts_index_heading">
+      <h1>投稿一覧</h1>
+    </div>
+    <div class="posts_index_contents">
+      <ul class="posts_list_multiple">
+      <% @posts.each do |post| %>
+        <li>
+          <div class="image_area">
+            <div class = "post_user">
+              <%= image_tag "/user_images/#{post.user.image_name}" , class: "post_user_image" %>
+              <%= link_to("#{post.user.name}","/users/#{post.user.id}",{class: "post_user_name"}) %>
+            </div>
+            <div class = "post_contents">
+              <img src="<%= "/post_images/#{post.image_name}" %>"><br>
+              <%= link_to("#{post.item_name}","/posts/#{post.id}",{class: "post_content_name"}) %><%= @likes_count %>
+            </div>
+          </div>
+        </li>
+      <% end %>
+      </ul>
+      <div class="paginate"><%= paginate @posts %></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+<div class="footer-logo">
+  <% if @current_user %>
+    <%= link_to("archipicture", "/posts/index") %>
+  <% else %>
+    <%= link_to("archipicture", "/") %>
+  <% end %>
+</div>
+</footer>

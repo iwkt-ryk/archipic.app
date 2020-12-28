@@ -1,0 +1,68 @@
+<header>
+<div class="header-logo">
+  <% if @current_user %>
+    <%= link_to("archipicture", "/posts/index") %>
+  <% else %>
+    <%= link_to("archipicture", "/") %>
+  <% end %>
+</div>
+<ul class="header-menus">
+  <% if @current_user %>
+    <li>
+      <%= link_to("投稿一覧","/posts/index") %>
+    </li>
+    <li>
+      <%= link_to("新規投稿","/posts/#{@current_user.id}/new") %>
+    </li>
+    <li>
+      <%= link_to("#{@current_user.name}さん", "/users/#{@current_user.id}") %>
+    </li>
+    <li>
+      <%= link_to("ログアウト", "/logout",{method: "post"}) %>
+    </li>
+  <% else %>
+    <li>
+      <%= link_to("新規ユーザー登録", "/users/signup") %>
+    </li>
+    <li>
+      <%= link_to("ログイン", "/login") %>
+    </li>
+  <% end %>
+</ul>
+</header>
+
+<div class="user_new_top">
+  <div class="user_new_wrapper">
+    <div class="user_new_form"> 
+      <div class="user_new_heading">
+        <h2>新規ユーザー登録</h2>
+      </div>
+      <% @user.errors.full_messages.each do |message| %>
+        <div class="form-error">
+          <%= message %>
+        </div>
+      <% end %>
+      <%= form_tag("/users/create") do %>
+      <div class="user_input_form">
+          <p>ユーザーネーム</p>
+            <input name="name" value="<%= @user.name %>">
+          <p>メールアドレス</p>
+            <input name="email" value="<%= @user.email %>">
+          <p>パスワード</p>
+          <input name="password" type="password" value="<%= @user.password %>"><br>
+          <input type="submit" value="新規登録">
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<footer>
+<div class="footer-logo">
+  <% if @current_user %>
+    <%= link_to("archipicture", "/posts/index") %>
+  <% else %>
+    <%= link_to("archipicture", "/") %>
+  <% end %>
+</div>
+</footer>
