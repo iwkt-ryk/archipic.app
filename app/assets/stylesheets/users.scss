@@ -208,6 +208,10 @@
   color: black;
 }
 
+.user-btn {
+  display: flex;
+}
+
 .user-edit-btn {
     font-size: 15px;
     width: 120px;
@@ -220,6 +224,20 @@
 }
 
 .user-edit-btn:hover {
+  opacity: 0.6;
+}
+
+.user-destroy-btn {
+  font-size: 15px;
+  width: 120px;
+  margin: 0 auto;
+  padding: 10px 0;
+  background-color: red;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.user-destroy-btn:hover {
   opacity: 0.6;
 }
 
