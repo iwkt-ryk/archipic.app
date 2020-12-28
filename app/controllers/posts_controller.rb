@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :ensure_correct_user , {only:[:edit,:update,:destroy]}
-  before_action :authenticate_user,{only: [:show,:edit,:update]}
+  
 
   def index
     @posts = Post.all.order(created_at: :desc).page(params[:page])
@@ -22,17 +22,17 @@ class PostsController < ApplicationController
       place_name: params[:place_name],
       designer: params[:designer],
       user_id: @current_user.id ,
-      image_name: params[:image_name]
+      image_name: params[:image]
     )
 
-    if @post.save 
+    if @post.save
       params[:image]
       @post.image_name = "#{@post.id}.jpg"
       image = params[:image]
       File.binwrite("public/post_images/#{@post.image_name}",image.read)
       @post.save
       redirect_to("/posts/index")
-      flash[:notice] = "投稿が完了しました。"
+      flash[:notice] = "投稿が完了しました"
     else
       render("posts/new")
     end
@@ -56,7 +56,7 @@ class PostsController < ApplicationController
     
     if @post.save
       redirect_to("/posts/#{@post.id}")
-      flash[:notice] = "投稿内容を更新しました。"
+      flash[:notice] = "投稿内容を更新しました"
     else
       @error_message = "タイトルを入力してください"
       render("posts/edit")
