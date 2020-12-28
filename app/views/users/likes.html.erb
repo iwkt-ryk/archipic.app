@@ -63,6 +63,7 @@
       <ul class="posts_list_multiple">
       <% @likes.each do |like| %>
         <% post = Post.find_by(id: like.post_id) %>
+        <% if post %>
         <li>
           <div class="image_area">
             <div class = "post_user">
@@ -75,6 +76,7 @@
             </div>
           </div>
         </li>
+      <% end %>
       <% end %>
       </ul>
     </div>
