@@ -220,7 +220,7 @@
     opacity: 0.6;
   }
 
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 480px) {
     .top_main_container {
       width: 100%;
       height: auto;
