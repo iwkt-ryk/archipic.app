@@ -221,6 +221,48 @@
   }
 
   @media screen and (max-width: 480px) {
+    header {
+      width: 100%;
+      height: 270px;
+      margin: 0 auto;
+      background-color: white;
+      z-index: 1;
+    }
+    
+    .header-logo {
+      float: left;
+      padding-left: 50px;
+      padding-top: 95px;
+      line-height: 64px;
+    }
+    
+    .header-logo a{
+      color: #354e59;
+      font-size: 70px;
+    }
+    
+    .header-menus {
+      float: right;
+      padding-top: 200px;
+    }
+    
+    .header-menus li {
+      float: left;
+      line-height: 64px;
+      font-size: 13px;
+      padding-left: 15px;
+    }
+    
+    .header-menus a {
+      float: left;
+      font-size: 13px;
+      color: #738e99;
+    }
+  
+    .header-menus li :hover {
+      opacity: 0.6;
+    }
+    
     .top_main_container {
       width: 100%;
       height: auto;
