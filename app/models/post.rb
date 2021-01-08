@@ -5,6 +5,7 @@ class Post < ApplicationRecord
 
     mount_uploader :img, ImgUploader
 
+    
 
     def user
         return User.find_by(id: self.user_id)

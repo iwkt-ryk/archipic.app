@@ -63,6 +63,12 @@ gem 'rails-i18n', '~> 5.1'
 
 gem 'carrierwave'
 
+gem 'jquery-rails'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.6'
+end
+
 group :production do
   gem 'pg'
 end
