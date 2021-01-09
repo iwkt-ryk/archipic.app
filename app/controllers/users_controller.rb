@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :admin_user,{only: [:destroy]}
   before_action :authenticate_user,{only: [:show,:edit,:update,:destroy]}
   before_action :forbid_login_user,{only: [:new,:create,:login_page,:login]}
   before_action :ensure_correct_user,{only: [:edit,:update,:destroy]}
@@ -78,6 +79,13 @@ class UsersController < ApplicationController
   def likes
     @user = User.find_by(id: params[:id])
     @likes = Like.where(user_id: @user.id)
+  end
+
+  def admin_user
+    @user = User.find_by(id: params[:id])
+    @user.destroy
+    redirect_to("/")
+    flash[:notice] = "ユーザー情報を全て削除しました。"
   end
 
   def ensure_correct_user
