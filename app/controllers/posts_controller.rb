@@ -30,7 +30,7 @@ class PostsController < ApplicationController
       params[:image]
       @post.image_name = "#{@post.id}.jpg"
       image = params[:image]
-      File.binwrite("public/post_images/#{@post.image_name}",image.read)
+      
       @post.save
       redirect_to("/posts/index")
       flash[:notice] = "投稿が完了しました"

@@ -67,6 +67,8 @@ gem 'jquery-rails'
 
 gem "aws-sdk-s3"
 
+gem 'aws-sdk', '< 2.0'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
 end
