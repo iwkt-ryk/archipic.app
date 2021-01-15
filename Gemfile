@@ -63,9 +63,11 @@ gem 'rails-i18n', '~> 5.1'
 
 gem 'carrierwave'
 
+gem 'fog'
+
 gem 'jquery-rails'
 
-gem "aws-sdk-s3"
+gem "aws-sdk-s3", require: false
 
 gem 'aws-sdk', '< 2.0'
 
